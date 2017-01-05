@@ -6,7 +6,7 @@
 /*   By: apissier <apissier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/21 18:46:55 by apissier          #+#    #+#             */
-/*   Updated: 2016/12/22 18:24:41 by apissier         ###   ########.fr       */
+/*   Updated: 2017/01/05 12:03:24 by apissier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ static int				check_end_of_line(char **save, char **line)
 	i = 0;
 	tmp = NULL;
 	if (*save)
-	{
 		if (ft_strchr(*save, '\n') != NULL)
 		{
 			tmp = ft_strchr(*save, '\n');
@@ -37,7 +36,6 @@ static int				check_end_of_line(char **save, char **line)
 				return (0);
 			return (1);
 		}
-	}
 	return (0);
 }
 
@@ -56,7 +54,10 @@ static int				while_read(const int fd, char *buf, char **save, \
 		free(*save);
 		*save = ptr;
 		if (check_end_of_line(save, line))
+		{
+			free(ptr);
 			return (1);
+		}
 	}
 	if (ret < 0)
 		return (-1);

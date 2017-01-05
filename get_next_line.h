@@ -6,13 +6,13 @@
 /*   By: apissier <apissier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/11 15:51:14 by apissier          #+#    #+#             */
-/*   Updated: 2016/12/22 18:50:38 by apissier         ###   ########.fr       */
+/*   Updated: 2017/01/05 11:41:39 by apissier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
-# define BUFF_SIZE 1000 
+# define BUFF_SIZE 1000
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
